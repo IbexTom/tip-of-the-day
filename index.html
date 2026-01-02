@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #111;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+
+  #tip {
+    font-size: 36px;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+</style>
+
+<h1>Safety Tip of the Day</h1>
+<div id="tip"></div>
+
+<script>
+  const tips = [
+    "If it feels rushed, slow down. Most injuries happen in a hurry.",
+    "Never bypass a guard. If it’s in the way, it’s telling you something.",
+    "Hands clear before cycling the machine.",
+    "Stop the machine before clearing jams or debris.",
+    "Lockout/Tagout is not optional — even for quick fixes.",
+    "Check pinch points before starting a run.",
+    "Good footing matters. Clean floors prevent bad days.",
+    "Report near-misses. They’re warnings, not failures.",
+    "Verify tooling alignment before full-speed operation.",
+    "Keep hands out of the roll path at all times.",
+    "If you didn’t hear the E-stop click, test it again.",
+    "Sharp edges stay sharp. Awareness prevents cuts.",
+    "If you can’t see it clearly, don’t operate it.",
+    "Fatigue causes mistakes. Take the break.",
+    "Lift with your legs — or ask for help.",
+    "One operator, one set of controls.",
+    "Communicate before you move material.",
+    "Secure loose clothing before startup.",
+    "If something sounds wrong, stop and check.",
+    "If you wouldn’t do it with someone watching, don’t do it alone."
+  ];
+
+  const today = new Date();
+  const index = today.getDate() % tips.length;
+  document.getElementById("tip").innerText = tips[index];
+</script>
