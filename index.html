@@ -4,8 +4,12 @@
   body {
     margin: 0;
     height: 100vh;
-    background: #111;
-    color: white;
+    background: linear-gradient(
+      135deg,
+      #f4b400,
+      #f9d423
+    );
+    color: #111;
     font-family: Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,17 +23,26 @@
     font-size: 48px;
     margin-bottom: 30px;
     letter-spacing: 1px;
-    opacity: 0.9;
+    font-weight: bold;
   }
 
   #tip {
-    font-size: 36px;
+    font-size: 38px;
     line-height: 1.4;
     max-width: 90%;
+    font-weight: 600;
+  }
+
+  .accent {
+    width: 120px;
+    height: 6px;
+    background: #111;
+    margin-bottom: 25px;
   }
 </style>
 
 <h1>Safety Tip of the Day</h1>
+<div class="accent"></div>
 <div id="tip"></div>
 
 <script>
@@ -51,12 +64,4 @@
     "Lift with your legs — or ask for help.",
     "One operator, one set of controls.",
     "Communicate before you move material.",
-    "Secure loose clothing before startup.",
-    "If something sounds wrong, stop and check.",
-    "If you wouldn’t do it with someone watching, don’t do it alone."
-  ];
-
-  const today = new Date();
-  const index = today.getDate() % tips.length;
-  document.getElementById("tip").innerText = tips[index];
-</script>
+    "
