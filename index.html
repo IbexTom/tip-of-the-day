@@ -64,4 +64,12 @@
     "Lift with your legs — or ask for help.",
     "One operator, one set of controls.",
     "Communicate before you move material.",
-    "
+    "Secure loose clothing before startup.",
+    "If something sounds wrong, stop and check.",
+    "If you wouldn’t do it with someone watching, don’t do it alone."
+  ];
+
+  const today = new Date();
+  const index = today.getDate() % tips.length;
+  document.getElementById("tip").innerText = tips[index];
+</script>
